@@ -6,7 +6,7 @@ include(ExternalProject)
 set(openexr_version ${ILMBASE_VERSION})
 
 set(url_openexr https://github.com/openexr/openexr.git)
-set(tag_openexr v${ilmbase_version})
+set(tag_openexr v${openexr_version})
 
 if(${REZ_BUILD_INSTALL})
     set(install_cmd make install ${make_args})
