@@ -8,7 +8,7 @@ description = \
     """
 
 variants = [
-    ["platform-linux"]
+    ["platform"]
 ]
 
 uuid = "repository.ilmbase"
