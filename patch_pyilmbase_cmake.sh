@@ -1,0 +1,2 @@
+#!/bin/bash
+sed -i -e 's/COMPONENTS\s*Python/COMPONENTS python/g' -e '/FIND_PACKAGE\s*(\s*NumPy\s*)/i INCLUDE_DIRECTORIES (${Boost_INCLUDE_DIRS})' -e '/FIND_PACKAGE\s*(\s*NumPy\s*)/i LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})' $1
