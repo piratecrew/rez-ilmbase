@@ -5,4 +5,3 @@ Rez Package for IlmBase with python support
 
 Build status is for versions:
   - 2.2.0
-  - 2.1.0
