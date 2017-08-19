@@ -6,6 +6,7 @@ language: cpp
 env:
   - VERSION=2.2.0
   - VERSION=2.1.0
+  - OVERRIDE_BOOST_MODULES="--with-python"
 
 before_install:
   - sudo apt-get -qq update

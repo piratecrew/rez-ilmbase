@@ -39,7 +39,6 @@ ExternalProject_add(
     DOWNLOAD_COMMAND ""
     SOURCE_DIR ${PROJECT_BINARY_DIR}/openexr/src/openexr/IlmBase
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} -DNAMESPACE_VERSIONING=OFF
-    BUILD_IN_SOURCE 0
 )
 
 ExternalProject_add(
@@ -50,7 +49,6 @@ ExternalProject_add(
     PATCH_COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/patch_pyilmbase_cmake.sh CMakeLists.txt #Don't really know why i need to do this
     SOURCE_DIR ${PROJECT_BINARY_DIR}/openexr/src/openexr/PyIlmBase
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} -DNAMESPACE_VERSIONING=OFF -DBoost_DEBUG=1 -DILMBASE_PACKAGE_PREFIX=${CMAKE_INSTALL_PREFIX} -DBoost_PYTHON_LIBRARY=boost_python -DPYTHON_INCLUDE_DIR=${python_INCLUDE_DIRS} -DPYTHON_LIBRARY=${python_LIBRARIES}
-    BUILD_IN_SOURCE 1
 )
 
 rez_install_files(
