@@ -18,7 +18,6 @@ else()
     set(install_cmd "")
 endif()
 
-message(STATUS "BOOST_ROOT=$ENV{BOOST_ROOT} -DBOOST_INCLUDEDIR=${boost_INCLUDE_DIRS} -DBOOST_LIBRARYDIR=${boost_LIBRARY_DIRS} -DBoostLIBRARIES=${boost_LIBRARIES}")
 # Just Clone and checkout the right tag.
 # The build is made in the next External Command.
 ExternalProject_add(

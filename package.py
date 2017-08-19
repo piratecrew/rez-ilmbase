@@ -13,7 +13,7 @@ variants = [
 
 requires = [
     "python-2.7",
-    "boost"
+    "boost-1.54+"
 ]
 
 def commands():
