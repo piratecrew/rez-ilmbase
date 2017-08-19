@@ -1,6 +1,6 @@
 name = "ilmbase"
 
-version = "2.1.0"
+version = "2.2.0"
 
 description = \
     """
@@ -8,11 +8,17 @@ description = \
     """
 
 variants = [
-    ["platform"]
+    ["platform-linux"]
 ]
 
-uuid = "repository.ilmbase"
+requires = [
+    "python-2.7",
+    "boost"
+]
 
 def commands():
-    env.CMAKE_MODULE_PATH.append("{root}/cmake")
+    env.PATH.append("{root}/bin")
     env.LD_LIBRARY_PATH.append("{root}/lib")
+    env.PYTHONPATH.append("{root}/lib/python2.7/site-packages")
+    if building:
+        env.CMAKE_MODULE_PATH.append("{root}/cmake")
